@@ -14,15 +14,15 @@ const updatecomprascontroller = new UpdateComprasController()
 
 
 // Get All endereco
-comprasRouter.get('/estados', getallcomprascontroller.handle);
+comprasRouter.get('/compras', getallcomprascontroller.handle);
 
 // Delete Endereco
-comprasRouter.delete('/estados', deletecomprascontroller.handle);
+comprasRouter.delete('/compras', deletecomprascontroller.handle);
 
 // Create Endereco
-comprasRouter.post('/estados', createcomprascontroller.handle);
+comprasRouter.post('/compras', createcomprascontroller.handle);
 
 // Update Endereco
-comprasRouter.post('/estados', updatecomprascontroller.handle);
+comprasRouter.post('/compras', updatecomprascontroller.handle);
 
 export {comprasRouter}

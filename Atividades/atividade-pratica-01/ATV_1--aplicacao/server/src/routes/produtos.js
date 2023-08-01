@@ -14,15 +14,15 @@ const updateprodutoscontroller = new UpdateProdutosController()
 
 
 // Get All endereco
-produtosRouter.get('/estados', getallprodutoscontroller.handle);
+produtosRouter.get('/produtos', getallprodutoscontroller.handle);
 
 // Delete Endereco
-produtosRouter.delete('/estados', deleteprodutoscontroller.handle);
+produtosRouter.delete('/produtos', deleteprodutoscontroller.handle);
 
 // Create Endereco
-produtosRouter.post('/estados', createprodutoscontroller.handle);
+produtosRouter.post('/produtos', createprodutoscontroller.handle);
 
 // Update Endereco
-produtosRouter.post('/estados', updateprodutoscontroller.handle);
+produtosRouter.post('/produtos', updateprodutoscontroller.handle);
 
 export {produtosRouter}

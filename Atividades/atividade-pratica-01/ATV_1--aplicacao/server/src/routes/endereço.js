@@ -14,15 +14,15 @@ const updateenderecocontroller = new UpdateEnderecoController()
 
 
 // Get All endereco
-enderecoRouter.get('/estados', getallenderecocontroller.handle);
+enderecoRouter.get('/endereco', getallenderecocontroller.handle);
 
 // Delete Endereco
-enderecoRouter.delete('/estados', deleteenderecocontroller.handle);
+enderecoRouter.delete('/endereco', deleteenderecocontroller.handle);
 
 // Create Endereco
-enderecoRouter.post('/estados', createenderecocontroller.handle);
+enderecoRouter.post('/endereco', createenderecocontroller.handle);
 
 // Update Endereco
-enderecoRouter.post('/estados', updateenderecocontroller.handle);
+enderecoRouter.post('/endereco', updateenderecocontroller.handle);
 
 export {enderecoRouter}
