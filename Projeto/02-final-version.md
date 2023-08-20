@@ -8,22 +8,24 @@
 
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+  Meu projeto final tem como finalidade ser um centro de troca de cartas(figurinhas). Nele os usuários podem trocar, criar e vizualizar suas cartas.
+  Pensei como se fosse uma plataforma onde amigos pudessem se divertir e se gabar na escola por terem aquela figurinha incrível. Além disso,
+  não da pra rasgar uma figurinha online, né?!
 
 ### 1. Funcionalidades implementadas
-<!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
+Criar cartas, vizualizar suas cartas e cartas dos outros usuários e trocar cartas.
   
 ### 2. Funcionalidades previstas e não implementadas
-<!-- Descrever as funcionalidades que eram previstas e não foram implementas, apresentando uma breve justificativa do porquê elas não foram incluídas -->
+Gostaria de criar um sistema de batalha também, mas isso seria muito trabalhoso para o tempo que tive.
 
 ### 3. Outras funcionalidades implementadas
-<!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
+Apliquei segurança nos dados, permitindo encriptamento das senhas no banco de dados.
 
 ### 4. Principais desafios e dificuldades
-<!-- Descrever os principais desafios encontrados no desenvolvimento do trabalho, quais foram as dificuldades e como elas foram superadas e resolvidas. -->
+Aconteceram muitos erros referentes ao react, e diversos outros por bugs que acabaram sendo muito difíceis de decifrar. No final, tudo deu certo.
 
 ### 5. Instruções para instalação e execução
-<!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
+Eu utilizei um banco de dados local, pelo PG admin. Meu PG admin acabou corrompendo e não tenho mais acesso a ele, mas caso precise testar, é só alocar os objetos das cartas as variáveis dos usuários na tela de usuário.
 
-### 6. Referências
-<!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
+
+
