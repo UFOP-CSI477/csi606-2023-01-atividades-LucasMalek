@@ -1,0 +1,84 @@
+
+
+
+GET http://localhost:5555
+
+###
+GET http://localhost:5555/admin
+
+###
+GET http://localhost:5555/estados
+
+###
+GET http://localhost:5555/estados/3
+
+###
+POST http://localhost:5555/estados
+Content-Type: application/json
+
+{
+    "nome": "Amazonas",
+    "sigla": "AM"
+}
+
+###
+PUT http://localhost:5555/estados
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nome": "Tocantins",
+    "sigla": "TO"
+}
+
+###
+DELETE http://localhost:5555/estados
+Content-Type: application/json
+
+{
+    "ident": 3
+}
+
+### 
+GET http://localhost:5555/cidades
+
+###
+POST http://localhost:5555/cidades
+Content-Type: application/json
+
+{
+    "nome": "Campinas",
+    "estado_id": 2
+}
+
+###
+POST http://localhost:5555/endereco
+Content-Type: application/json
+
+{
+    "rua": "bkikkk",
+    "numero": 2,
+    "bairro": "espeto",
+    "cidade_id": 2
+}
+
+###
+GET http://localhost:5555/endereco
+
+###
+POST http://localhost:5555/compras
+Content-Type: application/json
+
+{
+    "endereco_id": 1,
+    "produto_id": 1
+}
+
+###
+POST http://localhost:5555/produtos
+Content-Type: application/json
+
+{
+    "valor_unitario": 5.8,
+    "descricao": "des"
+}

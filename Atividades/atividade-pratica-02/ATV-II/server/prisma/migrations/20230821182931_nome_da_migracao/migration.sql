@@ -1,0 +1,20 @@
+-- CreateTable
+CREATE TABLE "compras" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "data" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "endereco_id" INTEGER NOT NULL,
+    "produto_id" INTEGER NOT NULL,
+    "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "compras_endereco_id_fkey" FOREIGN KEY ("endereco_id") REFERENCES "enderecos" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "compras_produto_id_fkey" FOREIGN KEY ("produto_id") REFERENCES "produtos" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "produtos" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "valor_unitario" REAL NOT NULL,
+    "descricao" TEXT NOT NULL,
+    "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
