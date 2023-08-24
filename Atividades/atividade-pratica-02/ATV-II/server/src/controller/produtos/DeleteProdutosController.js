@@ -7,9 +7,7 @@ export class DeleteProdutosController {
 
         try {
             
-            const { id } = request.body;
-            console.log(id);
-
+            const {id}  = request.body;
             const produtos = await prisma.produtos.delete({
                 where: {
                     id
@@ -21,7 +19,7 @@ export class DeleteProdutosController {
             
             if ( error instanceof PrismaClientKnownRequestError ) {
                 return response.status(400).json({
-                    message: "Erro na exclusão do estado.",
+                    message: "Erro na exclusão do produto.",
                     error
                 });
             }

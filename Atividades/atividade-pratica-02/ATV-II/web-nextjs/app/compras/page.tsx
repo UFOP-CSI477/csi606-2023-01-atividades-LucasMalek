@@ -7,7 +7,7 @@ export default function Compra() {
       <h1>Lista de Compras</h1>
 
       <Link href="/">Home</Link>
-      <Link href="/compra/create">Cadastrar</Link>
+      <Link href="/compras/create">Cadastrar</Link>
 
       <CompraTable/>
     </main>

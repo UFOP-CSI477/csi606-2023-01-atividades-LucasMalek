@@ -4,11 +4,7 @@ export class GetAllProdutosController {
 
     async handle(request, response) {
         
-        const produto = await prisma.produtos.findMany({
-            include: {
-                id: true
-            }
-        });
+        const produto = await prisma.produtos.findMany();
         return response.json(produto);
     }
 }

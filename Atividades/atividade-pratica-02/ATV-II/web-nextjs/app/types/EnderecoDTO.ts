@@ -1,13 +1,13 @@
-import CidadeDTO from "./CidadeDTO"
+
 
 interface EnderecoDTO {
     id?:          number
     rua:         String
-    numero:      number
+    numero:      String
     complemento?: String
     bairro:      String
     telefone?:    String
-    cidade?: CidadeDTO
+    cidade_id:    number
     created_at?: string;
     updated_at?: string;
 }

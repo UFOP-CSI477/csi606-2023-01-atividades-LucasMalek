@@ -6,8 +6,8 @@ import Input from "@/app/components/forms/Input";
 
 export default function CreateEstado() {
     
-    const [data, setData] = useState('');
-
+    const [produto, setProduto] = useState('');
+    const [endereco, setEndereco] =useState('')
     const { push } = useRouter();
     
     async function handleSubmit(event : FormEvent) {
@@ -15,7 +15,8 @@ export default function CreateEstado() {
         event.preventDefault();
 
         const dado = {
-            data
+            endereco_id: parseInt(endereco),
+            produto_id: parseInt(produto)
         }
 
         const requestInit : RequestInit = {
@@ -52,7 +53,7 @@ export default function CreateEstado() {
 
                 <div>
                     <label 
-                        htmlFor="Data">Data</label>
+                        htmlFor="p_id">Id do produto</label>
                     {/* <input 
                         type="text" 
                         name="nome" 
@@ -60,12 +61,34 @@ export default function CreateEstado() {
                         onChange={(event) => {setNome
                         (event.target.value)}} /> */}
                     <Input 
-                        name="Data" 
-                        placeholder="Informe a data da compra"
-                        setValue={(event) => {setData
+                        name="p_id" 
+                        placeholder="Informe o id do produto"
+                        setValue={(event) => {setProduto
                             (event.target.value)}}
                     />
             
+                </div>
+                <div>
+                    <label 
+                        htmlFor="e_id">Endereco do produto</label>
+                    {/* <input 
+                        type="text" 
+                        name="nome" 
+                        id="nome"
+                        onChange={(event) => {setNome
+                        (event.target.value)}} /> */}
+                    <Input 
+                        name="e_id" 
+                        placeholder="Informe o id do endereco do usuário"
+                        setValue={(event) => {setEndereco
+                            (event.target.value)}}
+                    />
+            
+                </div>
+                <div>
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                    <button type="button">Voltar</button>
                 </div>
             </form>
 

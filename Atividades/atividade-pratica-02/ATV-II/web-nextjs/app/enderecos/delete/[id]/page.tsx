@@ -20,15 +20,12 @@ export default function DeleteCidade({ params } : DeleteCidadeParamsInterface) {
     const { push } = useRouter();
     
     useEffect(() => {
-      
-
       getByIdendereco( params.id )
         .then(data => {
             setRua(data.rua);
             setNumero(data.numero)
             setBairro(data.bairro)
         })
-      
     },[params])
   
     const handleSubmit = async (event: FormEvent) => {
@@ -48,7 +45,7 @@ export default function DeleteCidade({ params } : DeleteCidadeParamsInterface) {
   
       try {
         const response = await fetch(
-          "http://localhost:5555/endereco",
+          `http://localhost:5555/endereco`,
           requestInit
         );
   
@@ -65,8 +62,8 @@ export default function DeleteCidade({ params } : DeleteCidadeParamsInterface) {
     };
   
     return (
-      <main className="container m-auto">
-        <h1>Exclusão do endereço: {rua}, {numero}, {bairro}</h1>
+      <main className="container m-auto"> 
+        <h1>Exclusão do endereço: {params.id} :{rua}, {numero}, {bairro} </h1>
   
         <form onSubmit={handleSubmit}>
          

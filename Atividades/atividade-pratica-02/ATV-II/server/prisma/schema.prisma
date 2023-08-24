@@ -43,7 +43,7 @@ model Endereco {
   id Int @id @default(autoincrement())
 
   rua         String
-  numero      Int
+  numero      String
   complemento String?
   bairro      String
   telefone    String?

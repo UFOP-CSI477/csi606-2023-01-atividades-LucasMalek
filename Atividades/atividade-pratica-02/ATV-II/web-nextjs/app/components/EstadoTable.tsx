@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import EstadoDTO from "../types/EstadoDTO";
 
 
@@ -17,9 +18,16 @@ const getAllEstado = async () => {
 // }
 
 
-export default async function EstadoTable() {
+export default  function EstadoTable() {
 
-const estados : EstadoDTO[] = await getAllEstado();
+const [estados, setEstados] = useState<EstadoDTO[]>([])
+
+  useEffect(() => {
+    getAllEstado()
+        .then((data) => {
+            setEstados(data);
+        })
+      }, []);
 
     return(
         <table className="table-auto w-full border border-collapse border-stone-950">

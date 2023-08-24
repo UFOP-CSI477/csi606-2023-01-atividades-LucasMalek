@@ -7,8 +7,7 @@ export class DeleteComprasController {
 
         try {
             
-            const { id } = request.body;
-            console.log(id);
+            const {id}  = request.body;
 
             const compra = await prisma.compras.delete({
                 where: {

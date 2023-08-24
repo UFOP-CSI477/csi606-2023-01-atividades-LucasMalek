@@ -5,11 +5,10 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import Input from "@/app/components/forms/Input";
 
 export default function CreateEstado() {
-    
     const [rua, setRua] = useState('');
     const [numero, setNumero] = useState('');
     const [bairro, setBairro] = useState('')
-
+    const [cidade_id, setCidade] = useState('')
     const { push } = useRouter();
     
     async function handleSubmit(event : FormEvent) {
@@ -19,7 +18,8 @@ export default function CreateEstado() {
         const data = {
             rua,
             numero,
-            bairro
+            bairro,
+            cidade_id: parseInt(cidade_id)
         }
 
         const requestInit : RequestInit = {
@@ -45,6 +45,7 @@ export default function CreateEstado() {
             window.alert('Erro na inclusão do Endereço!');
             console.error(error);
         }
+
 
     }
 
@@ -89,6 +90,16 @@ export default function CreateEstado() {
                         placeholder="Informe o bairro"
                         setValue={(event) => {
                             setBairro(event.target.value)
+                        }} />
+                </div>
+                <div>
+                    <label 
+                        htmlFor="c_id">Id da cidade</label>
+                    <Input 
+                        name="c_id" 
+                        placeholder="Informe o id da cidade"
+                        setValue={(event) => {
+                            setCidade(event.target.value)
                         }} />
                 </div>
                 <div>

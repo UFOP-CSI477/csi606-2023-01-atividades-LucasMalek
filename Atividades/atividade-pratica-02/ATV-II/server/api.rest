@@ -82,3 +82,9 @@ Content-Type: application/json
     "valor_unitario": 5.8,
     "descricao": "des"
 }
+###
+GET http://localhost:5555/produtos
+
+### 
+
+DELETE http://localhost:5555/endereco/1

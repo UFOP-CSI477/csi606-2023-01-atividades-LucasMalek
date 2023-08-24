@@ -7,7 +7,7 @@ export default function Endereco() {
       <h1>Lista de endereços</h1>
 
       <Link href="/">Home</Link>
-      <Link href="/estados/create">Cadastrar</Link>
+      <Link href="/enderecos/create">Cadastrar</Link>
 
       <EnderecoTable/>
     </main>

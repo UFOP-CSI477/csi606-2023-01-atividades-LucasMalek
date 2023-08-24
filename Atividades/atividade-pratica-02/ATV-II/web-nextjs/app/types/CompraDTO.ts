@@ -5,8 +5,8 @@ import ProdutoDTO from "../types/ProdutosDTO"
 interface CompraDTO {
     id?: number
     data: string
-    endereco?: EnderecoDTO
-    produto?: ProdutoDTO
+    endereco_id: number
+    produto_id: number
     created_at?: string;
     updated_at?: string;
 }

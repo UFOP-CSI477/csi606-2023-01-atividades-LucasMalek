@@ -17,7 +17,7 @@ export default function CreateProduto() {
         event.preventDefault();
 
         const data = {
-            valor_unitario,
+            valor_unitario: parseInt(valor_unitario),
             descricao,
             
         }

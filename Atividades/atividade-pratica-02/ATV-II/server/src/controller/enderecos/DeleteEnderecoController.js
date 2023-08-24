@@ -6,28 +6,27 @@ export class DeleteEnderecoController {
     async handle(request, response) {
 
         try {
-            const { id } = request.body;
-            console.log(id);
+            const {id}  = request.body
 
             const endereco = await prisma.endereco.delete({
                 where: {
-                    id
+                    id: id
                 }
             });
+
 
             return response.json(endereco);
         } catch (error) {
             
             if ( error instanceof PrismaClientKnownRequestError ) {
                 return response.status(400).json({
-                    message: "Erro na exclusão do estado.",
+                    message: "Erro na exclusão do endereco.",
                     error
                 });
             }
 
             return response.status(500).json({
-                error,
-                id
+                error
             });
 
         }
